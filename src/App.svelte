@@ -27,46 +27,6 @@
     tabs = await res.json();
   })
 
-
-  // $: tabs = [
-  //   {
-  //     id: "1",
-  //     song: "Metal Militia",
-  //     artist: "Metallica",
-  //     instrument: "Guitar", 
-  //     tuning: "Standard", 
-  //     link: "https://tabs.ultimate-guitar.com/tab/metallica/metal-militia-tabs-122568",
-  //     editMode: false
-  //   },
-  //   {
-  //     id: "2",
-  //     song: "Master of Puppets",
-  //     artist: "Metallica",
-  //     tuning: "Standard",
-  //     instrument: "Guitar",
-  //     link: "https://tabs.ultimate-guitar.com/tab/metallica/master-of-puppets-tabs-47673",
-  //     editMode: false
-  //   },
-  //   {
-  //     id: "3",
-  //     song: "Pneuma",
-  //     artist: "Tool",
-  //     tuning: "Drop D",
-  //     instrument: "Bass", 
-  //     link: "https://tabs.ultimate-guitar.com/tab/tool/pneuma-bass-2818253",
-  //     editMode: false
-  //   },
-  //   {
-  //     id: "4",
-  //     song: "Shine on You Crazy Diamond, pts 1-5",
-  //     artist: "Pink Floyd",
-  //     tuning: "Standard",
-  //     instrument: "Guitar", 
-  //     link: "https://tabs.ultimate-guitar.com/tab/pink-floyd/shine-on-you-crazy-diamond-part-i-v-tabs-1681907",
-  //     editMode: false
-  //   }
-  // ]
-
   const sortClick = async (e) => {
     // get the column name to sort
     let header = e.target.innerText.toLowerCase()
