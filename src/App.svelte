@@ -121,18 +121,73 @@
     </button>
   </div>
   <ul class="list-headers">
-    <li class="song" on:click={sortClick}>Song</li>
-    <li class="artist" on:click={sortClick}>Artist</li>
-    <li class="instrument" on:click={sortClick}>Instrument</li>
-    <li class="tuning" on:click={sortClick}>Tuning</li>
-    <li class="link" on:click={sortClick}>Link</li>
+    <li class="song" on:click={sortClick}>
+      <div class="sort-column">
+        {#if sortedOn === "song" && order === 1}
+          <img src="icons8-sort-down-24.png" alt="add tab" />
+        {:else}
+          {#if sortedOn === "song" && order === -1}
+            <img src="icons8-sort-up-24.png" alt="add tab" />
+          {/if}
+        {/if}
+        Song
+      </div>
+    </li>
+    <li class="artist" on:click={sortClick}>
+      <div class="sort-column">
+        {#if sortedOn === "artist" && order === 1}
+          <img src="icons8-sort-down-24.png" alt="add tab" />
+        {:else}
+          {#if sortedOn === "artist" && order === -1}
+            <img src="icons8-sort-up-24.png" alt="add tab" />
+          {/if}
+        {/if}
+        Artist
+      </div>
+    </li>
+    <li class="instrument" on:click={sortClick}>
+      <div class="sort-column">
+        {#if sortedOn === "instrument" && order === 1}
+          <img src="icons8-sort-down-24.png" alt="add tab" />
+        {:else}
+          {#if sortedOn === "instrument" && order === -1}
+            <img src="icons8-sort-up-24.png" alt="add tab" />
+          {/if}
+        {/if}
+        Instru
+      </div>
+    </li>
+    <li class="tuning" on:click={sortClick}>
+      <div class="sort-column">
+        {#if sortedOn === "tuning" && order === 1}
+          <img src="icons8-sort-down-24.png" alt="add tab" />
+        {:else}
+          {#if sortedOn === "tuning" && order === -1}
+            <img src="icons8-sort-up-24.png" alt="add tab" />
+          {/if}
+        {/if}
+        Tuning
+      </div>
+    </li>
+    <li class="link" on:click={sortClick}>
+      <div class="sort-column">
+        {#if sortedOn === "link" && order === 1}
+          <img src="icons8-sort-down-24.png" alt="add tab" />
+        {:else}
+          {#if sortedOn === "link" && order === -1}
+            <img src="icons8-sort-up-24.png" alt="add tab" />
+          {/if}
+        {/if}
+        Link
+      </div>
+    </li>
   </ul>
   <ul>
     {#each tabs as tab}
       {#if tab.editMode}
         <form on:submit|preventDefault={t => updateTab(tab._id)}>
           <li class="song">
-            <input type="text" bind:value={song} />
+            <input type="text" bind:value={song} autofocus />
           </li>
           <li class="artist">
             <input type="text" bind:value={artist} />

@@ -158,7 +158,7 @@ ul,
 form {
   width: 100vw;
   display: grid;
-  grid-template-columns: 35% 10% 7% 10% 33% 5%;
+  grid-template-columns: 30% 15% 7% 10% 33% 5%;
   list-style: none;
   font-size: 1.4rem;
   font-weight: 500;
@@ -211,6 +211,12 @@ li.actions {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.sort-column {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 
